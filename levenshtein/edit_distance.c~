@@ -1,0 +1,11 @@
+/*
+ * Compute the min. edit distance between 2 strings:
+ * s = source string: len = n
+ * t = target string: len = m
+ * if s =0 return m
+ * if t = 0 return n 
+ * distance matrix[n+1,m+1]
+ * initialize d[[0...n],0] = [0...n]
+ * if s == t cost = 0
+ * else cost = 1
+ * have a matrix of
