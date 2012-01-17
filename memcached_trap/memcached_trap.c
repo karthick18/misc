@@ -29,7 +29,7 @@ memcached_return_t __trap_##sym(memcached_st *p, const char *const *keys, \
         fprintf(stderr, "Unable to resolve symbol [%s]. Error [%s]\n", #sym, dlerror()); \
         exit(EXIT_FAILURE);                                             \
     }                                                                   \
-    return __do_trap_##sym(orig_memcached_mget, p, keys, key_length, number_of_keys); \
+    return __do_trap_##sym(orig_##sym, p, keys, key_length, number_of_keys); \
 }                                                                       \
 MGET_TRAP_ALIAS(sym);
 
