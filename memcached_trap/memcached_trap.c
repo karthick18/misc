@@ -4,6 +4,8 @@
  * Just trap the memcached_mget routine to force NOTFOUND errors as requested by 
  * Gopal.V a.k.a @t3rmin4t0r the great!
  * The trap below should work as seen with a quick test run with test_memcached but the disclaimer above holds :)
+ *
+ * Just run make install as root or LD_PRELOAD the libmemcached_trap.so for the trap
  */
 #include <stdio.h>
 #include <dlfcn.h>
